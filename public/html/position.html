@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>职位管理</title>
+    <link rel="stylesheet" href="/lib/bootstarp/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- 导航 -->
+    <div class="container header">
+
+    </div>
+<!-- 添加 -->
+<div class="container">		
+    <button  data-toggle="modal" data-target="#addPosModal" class="btn btn-primary">添加</button>
+</div>
+
+<!-- 显示所有职位的表格 -->
+<div class="container">
+     <table class="table table-stripped table-bordered list-table">
+          <thead > 
+            <tr>
+              <th>序号</th>
+              <th >LOGO</th>
+              <th>职位</th>
+              <th>薪资</th>
+              <th>地点</th>
+              <th>职责</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+     </table>
+		<!-- 分页 -->
+		<nav aria-label="Page navigation">
+		  <ul class="pagination">
+  <!--       <li>
+          <a href="#" aria-label="Previous">
+            <span aria-hidden="trun">&laquo;</span>
+          </a>
+        </li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="trun">&raquo;</span>
+            </a>
+          </li> -->
+      </ul>
+		</nav>
+     
+</div>
+
+<!-- 添加职位的模态框 -->
+<div class="modal fade" id="addPosModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">添加职位</h4>
+      </div>
+      <div class="modal-body">
+        <form class="add-position-form">
+          <div class="form-group">
+            <label for="addLogo">公司LOGO</label>
+            <input type="file" class="form-control" name="logo" id="addLogo">
+          </div>
+          <div class="form-group">
+            <label for="addPositionName">职位名称</label>
+            <input type="text" class="form-control" name="name" id="addPositionName" placeholder="职位名称">
+          </div>
+          <div class="form-group">
+            <label for="addSalary">薪资</label>
+            <input type="text" class="form-control" name="salary" id="addSalary" placeholder="薪资">
+          </div>
+          <div class="form-group">
+            <label for="addCity">工作地点</label>
+            <input type="text" class="form-control" name="city" id="addCity" placeholder="工作地点">
+          </div>
+
+          <div class="form-group">
+            <label for="addDuty">工作职责</label>
+            <input type="text" class="form-control" name="duty" id="addDuty" placeholder="工作职责">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary btn-add-pos ">添加</button>
+      </div>
+    </div>
+  </div>
+</div>
+           
+    <script src="/lib/jquery/jquery-1.12.4.min.js"></script>
+    <script src="/lib/bootstarp/js/bootstrap.min.js"></script>
+    <script src="/lib/ejs/ejs.js"></script>
+    <script src="/js/common/LoginModal.js"></script>
+    <script src="/js/common/RegisterModal.js"></script>
+    <script src="/js/common/header.js"></script>
+    <script src="/js/position/position.js"></script>
+</body>
+</html>
